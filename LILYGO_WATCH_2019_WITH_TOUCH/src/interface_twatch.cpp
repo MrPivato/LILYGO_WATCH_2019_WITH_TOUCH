@@ -4,15 +4,38 @@ char buf[128];
 
 void draw_time()
 {
-    // Print DATE
-    watch->tft->setTextColor(TFT_GREEN, TFT_BLACK);
-    watch->tft->setTextSize(2);
-    snprintf(buf, sizeof(buf), "%s", watch->rtc->formatDateTime(4));
-    watch->tft->drawString(buf, 15, 100, 1);
+    // Fazer função
+    RTC_Date rtc_time = watch->rtc->getDateTime();
+    time_helper.year = rtc_time.year;
+    time_helper.month = rtc_time.month;
+    time_helper.day = rtc_time.day;
+    time_helper.hour = rtc_time.hour;
+    time_helper.minute = rtc_time.minute;
+    time_helper.second = rtc_time.second;
 
-    // Print TIME
-    watch->tft->setTextColor(TFT_ORANGE, TFT_BLACK);
-    watch->tft->setTextSize(1);
-    snprintf(buf, sizeof(buf), "%s", watch->rtc->formatDateTime());
-    watch->tft->drawString(buf, 11, 118, 7);
+    // Print Hour
+    watch->tft->setTextColor(TFT_YELLOW, TFT_BLACK);
+    watch->tft->setFreeFont(&Comfortaa_SemiBold50pt7b);
+    snprintf(buf, sizeof(buf), "%02u", time_helper.hour);
+    watch->tft->drawString(buf, 0, 0);
+
+    // Print Minute
+    watch->tft->setTextColor(TFT_YELLOW, TFT_BLACK);
+    watch->tft->setFreeFont(&Comfortaa_SemiBold50pt7b);
+    snprintf(buf, sizeof(buf), "%02u", time_helper.minute);
+    watch->tft->drawString(buf, 0, 90);
+
+    // Print Weekday and Day
+    watch->tft->setTextColor(TFT_CYAN, TFT_BLACK);
+    watch->tft->setFreeFont(&Comfortaa_SemiBold15pt7b);
+    snprintf(buf, sizeof(buf), "SAT, %02u", /*time_helper.day,*/ time_helper.day);
+    watch->tft->drawString(buf, 0, 185);
+
+    // Print Month and Year
+    watch->tft->setTextColor(TFT_CYAN, TFT_BLACK);
+    snprintf(buf, sizeof(buf), "%02u/%u", time_helper.month, time_helper.year);
+    watch->tft->setFreeFont(&Comfortaa_SemiBold15pt7b);
+    watch->tft->drawString(buf, 0, 215);
+
+    watch->tft->drawFastVLine(120, 0, 240, TFT_BLUE);
 }

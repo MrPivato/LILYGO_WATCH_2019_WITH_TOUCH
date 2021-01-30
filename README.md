@@ -4,4 +4,4 @@ Some playing with this platform.
 
 ## Preview
 
-![What it looks right now](images/preview.gif)
+![What it looks right now](images/preview.jpeg)

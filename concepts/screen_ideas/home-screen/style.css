@@ -1,0 +1,70 @@
+ 
+.screen {
+	height: 240px;
+	width: 240px;
+	background-color: #000000;
+}
+
+.date-time {
+	font-family: 'Comfortaa', cursive;
+	height: 100%;
+	width: 50%;
+	display: inline-block;
+}
+
+.info {
+	display: inline-block;
+	float: right;
+	font-family: 'Comfortaa', cursive;
+	height: 100%;
+	width: 50%;
+}
+
+/* COLORS *****************************/
+.hour { color: #fcff04; }
+.minute { color: #fcff04; }
+.weekday { color: #00fff9; }
+.day { color: #00fff9; }
+.month-year { color: #00fff9; }
+
+.battery { color: #49ff00; }
+.temperature { color: #ffc100; }
+.weather { color: #ffffff; }
+.steps { color: #06f27a; }
+.next-alarm { color: #ff0000; }
+
+.text { color: #ffffff; }
+/**************************************/
+/* FONT-SIZES *************************/
+.hour { font-size: 72px; }
+.minute { font-size: 72px; }
+.weekday { font-size: 26px; }
+.day { font-size: 26px; }
+.month-year { font-size: 32px; }
+
+.battery { font-size: 32px; }
+.temperature { font-size: 32px; }
+.weather { font-size: 48px; }
+.steps { font-size: 26px; }
+.next-alarm { font-size: 32px; }
+
+.color {  }
+/**************************************/
+
+.minute, .second, .weekday, .day, .month-year {
+	display: inline-block;
+}
+
+.month-year {
+	position: relative;
+	bottom: 0;
+	left: 0;
+}
+
+.weather {
+	text-align: center;
+}
+
+.battery, .temperature, .weather, .steps, .next-alarm, .day {
+	margin-bottom: 10px;
+}

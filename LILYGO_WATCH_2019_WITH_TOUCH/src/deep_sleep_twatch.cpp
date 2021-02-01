@@ -5,7 +5,7 @@ void deep_sleep_twatch()
     pinMode(AXP202_INT, INPUT_PULLUP);
     attachInterrupt(
         AXP202_INT, [] {
-            irq = true;
+            irq_sleep = true;
         },
         FALLING);
 
@@ -20,7 +20,7 @@ void deep_sleep_twatch()
     //tft->println("Press Peek Key to sleep...");
 
     // Wait for the power button to be pressed
-    while (!irq)
+    while (!irq_sleep)
     {
         loop();
     }

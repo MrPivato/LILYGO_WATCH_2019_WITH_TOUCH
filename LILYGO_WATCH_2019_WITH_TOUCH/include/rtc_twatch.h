@@ -12,6 +12,9 @@ struct TIME_HELPER
     uint8_t hour;
     uint8_t minute;
     uint8_t second;
+    char weekday[4];
 };
 
 extern struct TIME_HELPER time_helper;
+
+void update_time_helper_struct();

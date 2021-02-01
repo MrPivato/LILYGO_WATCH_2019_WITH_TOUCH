@@ -1,6 +1,6 @@
 #pragma once
 
-#include "configs_twatch.h"
+#include "twatch_configs.h"
 
 #include "theme_zeppelin.h"
 

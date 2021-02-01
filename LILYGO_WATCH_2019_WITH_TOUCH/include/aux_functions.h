@@ -1,6 +1,6 @@
 #pragma once
 
-#include "configs_twatch.h"
+#include "twatch_configs.h"
 
 //const uint32_t MS_PER_HOUR = 3600000;
 //const uint16_t MS_PER_MIN = 60000;

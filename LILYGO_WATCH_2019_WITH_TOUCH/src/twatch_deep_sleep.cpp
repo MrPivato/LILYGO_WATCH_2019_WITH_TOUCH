@@ -1,6 +1,6 @@
-#include "deep_sleep_twatch.h"
+#include "twatch_deep_sleep.h"
 
-void deep_sleep_twatch()
+void twatch_deep_sleep()
 {
     pinMode(AXP202_INT, INPUT_PULLUP);
     attachInterrupt(

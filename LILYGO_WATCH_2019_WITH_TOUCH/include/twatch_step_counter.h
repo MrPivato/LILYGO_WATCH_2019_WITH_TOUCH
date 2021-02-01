@@ -1,6 +1,6 @@
 #pragma once
 
-#include "configs_twatch.h"
+#include "twatch_configs.h"
 
 extern BMA *sensor;
 

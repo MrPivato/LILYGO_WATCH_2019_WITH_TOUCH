@@ -1,12 +1,12 @@
 #include <Arduino.h>
 
-#include "configs_twatch.h"
+#include "twatch_configs.h"
 #include "aux_functions.h"
 
-#include "deep_sleep_twatch.h"
-#include "rtc_twatch.h"
-#include "step_counter_twatch.h"
-#include "interface_twatch.h"
+#include "twatch_deep_sleep.h"
+#include "twatch_rtc.h"
+#include "twatch_step_counter.h"
+#include "os_interface.h"
 
 void setup()
 {
@@ -15,7 +15,7 @@ void setup()
   // just for setting the time while theres not a menu
   //watch->rtc->setDateTime(2020, 1, 25, 20, 20, 0);
 
-  deep_sleep_twatch();
+  twatch_deep_sleep();
 
   update_time_counter();
 }

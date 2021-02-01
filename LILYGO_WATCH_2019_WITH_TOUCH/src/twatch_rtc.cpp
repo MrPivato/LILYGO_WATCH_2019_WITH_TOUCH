@@ -1,4 +1,4 @@
-#include "rtc_twatch.h"
+#include "twatch_rtc.h"
 
 bool rtcIrq = false;
 

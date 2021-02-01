@@ -1,4 +1,4 @@
-#include "step_counter_twatch.h"
+#include "twatch_step_counter.h"
 
 BMA *sensor;
 

@@ -2,7 +2,7 @@
 
 #include <LilyGoWatch.h>
 
-#include "step_counter_twatch.h"
+#include "twatch_step_counter.h"
 
 extern TTGOClass *watch;
 extern TFT_eSPI *tft;

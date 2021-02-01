@@ -1,4 +1,4 @@
-#include "configs_twatch.h"
+#include "twatch_configs.h"
 
 TTGOClass *watch;
 TFT_eSPI *tft;

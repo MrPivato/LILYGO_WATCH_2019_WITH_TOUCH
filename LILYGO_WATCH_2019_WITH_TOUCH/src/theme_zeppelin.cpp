@@ -1,6 +1,6 @@
 #include "theme_zeppelin.h"
 
-void theme_zeppelin_homescreen()
+void theme_zeppelin_draw_homescreen()
 {
     // Print Hour
     watch->tft->setTextColor(TFT_YELLOW, TFT_BLACK);

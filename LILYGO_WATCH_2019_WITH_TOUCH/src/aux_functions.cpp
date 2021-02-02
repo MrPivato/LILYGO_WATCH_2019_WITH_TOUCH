@@ -11,4 +11,5 @@ unsigned long current_hms_update_millis;
 void update_time_counter()
 {
   current_hms_update_millis = millis();
+  current_inactivity_millis = millis();
 }

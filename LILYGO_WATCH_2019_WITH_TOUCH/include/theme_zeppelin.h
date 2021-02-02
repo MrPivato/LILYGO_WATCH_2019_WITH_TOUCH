@@ -24,4 +24,4 @@
 
 extern char buf[128];
 
-void theme_zeppelin_homescreen();
+void theme_zeppelin_draw_homescreen();
